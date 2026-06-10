@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>出品センチネル｜かんたん設定手順</title>
+<style>
+  :root{ --ink:#26303c; --blue:#5A84C9; --soft:#EEF4FF; --line:#D9D9D9; }
+  *{ box-sizing:border-box; }
+  body{ font-family:"Yu Gothic","Meiryo",sans-serif; color:var(--ink); line-height:1.9; margin:0; background:#fff; }
+  .page{ max-width:760px; margin:0 auto; padding:28px 32px; }
+  h1{ font-size:26px; margin:0 0 4px; }
+  .lead{ font-size:16px; color:#48535f; margin:0 0 18px; }
+  .safe{ background:var(--soft); border:1px solid #DCE9FF; border-radius:12px; padding:14px 18px; font-size:16px; margin:0 0 22px; }
+  .safe b{ color:var(--blue); }
+  h2{ font-size:19px; border-left:6px solid var(--blue); padding-left:12px; margin:26px 0 12px; }
+  ol{ font-size:17px; padding-left:0; list-style:none; counter-reset:step; }
+  ol li{ counter-increment:step; position:relative; padding:10px 0 10px 48px; border-bottom:1px dashed var(--line); }
+  ol li::before{ content:counter(step); position:absolute; left:0; top:10px; width:32px; height:32px; background:var(--blue); color:#fff; border-radius:50%; text-align:center; line-height:32px; font-weight:bold; }
+  .key{ background:#fff7e6; border:1px solid #f0d8a0; border-radius:6px; padding:1px 8px; font-weight:bold; }
+  .levels{ display:flex; gap:10px; margin:10px 0; flex-wrap:wrap; }
+  .lv{ flex:1; min-width:150px; border-radius:10px; padding:10px 14px; font-size:15px; }
+  .lv.low{ background:#E6F5FF; border:1px solid #bfe0f5; }
+  .lv.mid{ background:#FBF2E2; border:1px solid #ecd9ad; }
+  .lv.high{ background:#FBEAE6; border:1px solid #e6b6a8; }
+  .lv b{ font-size:17px; }
+  .important{ background:#FBEAE6; border:1px solid #e6b6a8; border-radius:12px; padding:14px 18px; font-size:16px; margin-top:22px; }
+  .hot{ font-size:18px; font-weight:bold; }
+  .foot{ text-align:center; color:#8893a0; font-size:13px; margin-top:24px; }
+  @media print{ body{ font-size:14px; } .page{ padding:0; } }
+</style>
+</head>
+<body>
+  <div class="page">
+    <h1>出品センチネル｜かんたん設定手順</h1>
+    <p class="lead">メルカリなどで「あやしい出品」を見つけたら、画面のすみで色とことばで教えてくれる道具です。</p>
+
+    <div class="safe">
+      🔒 <b>安全です。</b>この道具は、インターネットに<b>何も送りません</b>。あなたのパソコンの中だけで動きます。<b>無料</b>で、料金は一切かかりません。
+    </div>
+
+    <h2>設定のしかた（最初の1回だけ）</h2>
+    <ol>
+      <li>パソコンで <b>Google Chrome</b>（クロム）を開く。</li>
+      <li>上の住所を入れる白い欄に <span class="key">chrome://extensions</span> と入力して、Enter（エンター）を押す。</li>
+      <li>画面の右上にある「<b>デベロッパー モード</b>」のスイッチを、<b>オン</b>（右側・青）にする。</li>
+      <li>左上に出る「<b>パッケージ化されていない拡張機能を読み込む</b>」というボタンを押す。</li>
+      <li>娘が用意した「<b>出品センチネル</b>」のフォルダを選んで、「フォルダーの選択」を押す。</li>
+      <li>一覧に「出品センチネル」が出れば、<b>設定おわり</b>です。</li>
+    </ol>
+
+    <h2>使いかた（あとは自動）</h2>
+    <p>メルカリ・ラクマ・ヤフオクなどで<b>商品ページを開くだけ</b>。画面の右下に、判定が出ます。</p>
+    <div class="levels">
+      <div class="lv low"><b>青：低</b><br>気になる点は少なめ。</div>
+      <div class="lv mid"><b>黄：中</b><br>少し気になる点あり。落ち着いて確認。</div>
+      <div class="lv high"><b>赤：高</b><br>あやしい点が多い。要注意。</div>
+    </div>
+
+    <div class="important">
+      ⚠️ <b>いちばん大事なこと。</b><br>
+      これは“参考”です。最後に決めるのは、あなたです。<br>
+      <b>「中」や「赤」のときは、アプリの外（LINEなど）でのやり取り・先払い・振込・連絡先を教えること は、絶対にしないでください。</b>
+    </div>
+
+    <p class="hot" style="margin-top:18px">📞 困ったら：消費者ホットライン <span style="color:#C0492E">188</span>（いやや！）</p>
+
+    <p class="foot">制作：しずく ／ 出品センチネル（完全ローカル・通信なし）</p>
+  </div>
+</body>
+</html>
