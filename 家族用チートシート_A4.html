@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>フリマで買う前の安心チェック（A4）</title>
+<style>
+  :root{
+    --ice:#B7D9F7; --mist:#F8FAFD; --glass:#DDE5EC; --navy:#1E2633;
+    --silver:#C6CED8; --reflection:#EAF4FF; --lavender:#CFC9F6;
+  }
+  *{ box-sizing:border-box; }
+  html,body{ margin:0; padding:0; }
+  body{
+    font-family:"Zen Kaku Gothic New","Hiragino Kaku Gothic ProN","Yu Gothic UI","Yu Gothic","Meiryo",sans-serif;
+    color:var(--navy); background:#fff; line-height:1.5;
+  }
+  .page{ width:210mm; min-height:297mm; padding:14mm 13mm; margin:0 auto; }
+  h1{ font-size:25pt; margin:0 0 2mm; }
+  .lead{ font-size:11pt; color:#5a6573; margin:0 0 6mm; }
+  .accent{ color:#2c5f8a; }
+
+  .steps{ display:flex; gap:4mm; margin-bottom:6mm; }
+  .step{ flex:1; background:var(--reflection); border:1px solid var(--silver);
+    border-radius:5mm; padding:4mm 4mm 4mm; position:relative; }
+  .step .no{ display:inline-flex; align-items:center; justify-content:center;
+    width:9mm; height:9mm; border-radius:50%; background:var(--ice);
+    color:var(--navy); font-weight:700; font-size:13pt; margin-bottom:2mm; }
+  .step h2{ font-size:14pt; margin:0 0 2mm; }
+  .step ul{ margin:0; padding-left:5mm; font-size:10pt; }
+  .step li{ margin-bottom:1.5mm; }
+
+  .check{ background:var(--mist); border:1px solid var(--silver);
+    border-radius:5mm; padding:4mm 5mm; margin-bottom:6mm; }
+  .check h2{ font-size:14pt; margin:0 0 3mm; }
+  .check .grid{ display:grid; grid-template-columns:1fr 1fr; gap:1.5mm 6mm; font-size:10.5pt; }
+  .check .item{ display:flex; align-items:flex-start; gap:2mm; }
+  .box{ display:inline-block; width:4mm; height:4mm; border:1.5px solid #2c5f8a;
+    border-radius:1mm; margin-top:1mm; flex:none; }
+  .warn{ color:#a14d4d; font-weight:700; }
+
+  .bottom{ display:flex; gap:4mm; }
+  .qr{ width:42mm; flex:none; border:1.5px dashed var(--silver); border-radius:4mm;
+    display:flex; flex-direction:column; align-items:center; justify-content:center;
+    text-align:center; font-size:8.5pt; color:#7a8492; padding:3mm; }
+  .qr .sq{ width:24mm; height:24mm; border:1px solid var(--silver); border-radius:2mm;
+    margin-bottom:2mm; background:
+      repeating-linear-gradient(45deg,#eef3f8 0 3mm,#fff 3mm 6mm); }
+  .help{ flex:1; background:var(--lavender); border-radius:4mm; padding:4mm 5mm; }
+  .help h2{ font-size:13pt; margin:0 0 2mm; }
+  .help p{ font-size:10pt; margin:0 0 3mm; }
+  .line{ border-bottom:1.5px solid var(--navy); height:6mm; margin-bottom:1mm; }
+  .small{ font-size:8.5pt; color:#5a6573; }
+  .hot{ font-size:11pt; font-weight:700; }
+
+  @page{ size:A4 portrait; margin:0; }
+  @media print{ body{ -webkit-print-color-adjust:exact; print-color-adjust:exact; } .page{ margin:0; } }
+</style>
+</head>
+<body>
+<div class="page">
+  <h1>フリマで買う前の<span class="accent">安心チェック</span> 🛡️</h1>
+  <p class="lead">あやしい出品を見抜く、かんたん3ステップ。迷ったら下のチェックを見てね。</p>
+
+  <div class="steps">
+    <div class="step">
+      <div class="no">1</div>
+      <h2>出品者を見る</h2>
+      <ul>
+        <li>評価が少なすぎ・悪い口コミ（「届かない」等）はないか</li>
+        <li>アカウントが作りたてすぎないか</li>
+        <li>ブランド品ばかり大量に売っていないか</li>
+      </ul>
+    </div>
+    <div class="step">
+      <div class="no">2</div>
+      <h2>画像を見る</h2>
+      <ul>
+        <li>自分で撮った写真か（ネットの拾い画っぽくないか）</li>
+        <li>写真が1枚だけ・不自然に少なくないか</li>
+        <li>同じ画像が他にも出回っていないか</li>
+      </ul>
+    </div>
+    <div class="step">
+      <div class="no">3</div>
+      <h2>説明・値段を見る</h2>
+      <ul>
+        <li>相場より極端に安くないか（うますぎる話に注意）</li>
+        <li>説明が極端に短い・日本語が不自然でないか</li>
+        <li>「LINEで」「先に振込」など<span class="warn">アプリ外取引</span>を求めてこないか</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="check">
+    <h2>迷ったら見る｜クイック確認 ✅</h2>
+    <div class="grid">
+      <div class="item"><span class="box"></span><span>値段が相場よりかなり安い</span></div>
+      <div class="item"><span class="box"></span><span>「すぐ買って」と<span class="warn">急かしてくる</span></span></div>
+      <div class="item"><span class="box"></span><span>アプリの外で連絡・支払いを求める</span></div>
+      <div class="item"><span class="box"></span><span>評価が極端に少ない／悪い</span></div>
+      <div class="item"><span class="box"></span><span>画像が1枚だけ・拾い画っぽい</span></div>
+      <div class="item"><span class="box"></span><span>日本語が不自然・説明が雑</span></div>
+    </div>
+    <p class="small" style="margin:3mm 0 0;">▶ 1つでも当てはまったら「買わずに一度ストップ」。<span class="warn">アプリ外取引・前払いは絶対しない。</span></p>
+  </div>
+
+  <div class="bottom">
+    <div class="qr">
+      <div class="sq"></div>
+      拡張機能の<br>インストール用<br>（QRはあとで貼る）
+    </div>
+    <div class="help">
+      <h2>困ったら、ここに連絡してね ☎️</h2>
+      <p class="small">あやしいと思ったら、買う前に相談を。アプリの「運営に通報」も使えます。</p>
+      <p class="small" style="margin-bottom:1mm;">家族（しずく）の連絡先：</p>
+      <div class="line"></div>
+      <p class="hot" style="margin:3mm 0 0;">消費者ホットライン　☎ 188（いやや！）</p>
+      <p class="small">※ 局番なしの「１８８」。お金を払う前に、まず相談。</p>
+    </div>
+  </div>
+</div>
+</body>
+</html>

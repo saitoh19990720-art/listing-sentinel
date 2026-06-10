@@ -1,0 +1,11 @@
+{
+  "manifest_version": 3,
+  "name": "Listing Sentinel (Local-Only)",
+  "version": "0.2.0",
+  "description": "出品ページを簡易スコアリング。判定もログも端末内だけ（完全ローカル・通信なし）。",
+  "permissions": ["storage", "activeTab", "scripting", "downloads"],
+  "action": {
+    "default_title": "Listing Sentinel",
+    "default_popup": "popup.html"
+  }
+}
